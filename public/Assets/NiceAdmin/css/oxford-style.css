@@ -1,0 +1,251 @@
+/* Oxford University Color Scheme */
+:root {
+    --oxford-blue: #002147;
+    --oxford-red: #E31E24;
+    --oxford-cream: #F8F8F8;
+    --oxford-gray: #333333;
+}
+
+/* Typography - Oxford Style */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+/* Header - Oxford Blue */
+#header {
+    background: linear-gradient(135deg, var(--oxford-blue) 0%, #001530 100%) !important;
+    box-shadow: 0 2px 15px rgba(0,33,71,0.3);
+    height: 70px;
+}
+
+#header .logo img {
+    max-height: 50px;
+}
+
+#header .logo span {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white !important;
+    margin-left: 10px;
+}
+
+/* Sidebar - Oxford Style */
+#sidebar {
+    background: var(--oxford-blue) !important;
+    border-right: 3px solid var(--oxford-red);
+}
+
+.sidebar-nav .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 0.95rem;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: white !important;
+    background: rgba(255,255,255,0.1) !important;
+    border-left-color: var(--oxford-red);
+    padding-left: 20px;
+}
+
+.sidebar-nav .nav-link.active {
+    color: white !important;
+    background: rgba(227,30,36,0.2) !important;
+    border-left-color: var(--oxford-red);
+}
+
+.sidebar-nav i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Page Title - Oxford Style */
+.pagetitle {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--oxford-blue);
+}
+
+.pagetitle h1 {
+    color: var(--oxford-blue) !important;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pagetitle .breadcrumb {
+    font-size: 0.9rem;
+}
+
+.pagetitle .breadcrumb-item a {
+    color: var(--oxford-blue) !important;
+}
+
+/* Cards - Oxford Style */
+.card {
+    border: none !important;
+    border-top: 4px solid var(--oxford-blue) !important;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08) !important;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card .card-body {
+    padding: 25px;
+}
+
+.card .card-title {
+    color: var(--oxford-blue);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--oxford-cream);
+}
+
+/* Buttons - Oxford Style */
+.btn-primary {
+    background-color: var(--oxford-blue) !important;
+    border-color: var(--oxford-blue) !important;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--oxford-red) !important;
+    border-color: var(--oxford-red) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(227,30,36,0.3);
+}
+
+/* Login Page - Oxford Style */
+.login-card {
+    border-top: 5px solid var(--oxford-red) !important;
+}
+
+.login-card .card-title {
+    color: var(--oxford-blue);
+    font-size: 1.8rem;
+}
+
+/* Footer - Oxford Style */
+#footer {
+    background: var(--oxford-blue) !important;
+    color: white !important;
+    padding: 20px 0;
+    border-top: 3px solid var(--oxford-red);
+}
+
+#footer .copyright a {
+    color: var(--oxford-red);
+    font-weight: 600;
+}
+
+/* Hero Section - Oxford Style */
+.hero-oxford {
+    background: linear-gradient(135deg, var(--oxford-blue) 0%, #001530 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 30px;
+    border-bottom: 5px solid var(--oxford-red);
+}
+
+.hero-oxford h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-oxford p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Stats Section */
+.stats-oxford {
+    background: var(--oxford-cream);
+    padding: 40px 0;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.stat-box h3 {
+    color: var(--oxford-blue);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: var(--oxford-gray);
+    font-size: 1rem;
+}
+
+/* Program Studi Cards */
+.prodi-card {
+    border-top: 4px solid var(--oxford-red) !important;
+    transition: all 0.3s;
+}
+
+.prodi-card:hover {
+    box-shadow: 0 8px 25px rgba(0,33,71,0.2) !important;
+}
+
+.prodi-card .card-title {
+    color: var(--oxford-blue);
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.alert-danger {
+    background-color: #ffe6e6;
+    color: #cc0000;
+}
+
+.alert-success {
+    background-color: #e6ffe6;
+    color: #006600;
+}
+
+/* User Profile Dropdown */
+.nav-profile img {
+    border: 2px solid var(--oxford-red);
+}
+
+.dropdown-menu {
+    border-top: 3px solid var(--oxford-red);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-oxford h1 {
+        font-size: 2rem;
+    }
+    
+    .pagetitle h1 {
+        font-size: 1.5rem;
+    }
+}
