@@ -4,12 +4,16 @@ namespace App\Controllers;
 
 class AuthController extends BaseController
 {
-    // Data user statis (SOAL 04)
     private $users = [
         'admin' => [
             'password' => 'admin123',
-            'name'     => 'Administrator Kampus',
+            'name'     => 'Administrator ALLAUNDRY',
             'role'     => 'admin'
+        ],
+        'kasir' => [
+            'password' => 'kasir123',
+            'name'     => 'Kasir ALLAUNDRY',
+            'role'     => 'kasir'
         ]
     ];
 
@@ -33,7 +37,7 @@ class AuthController extends BaseController
                 'name'       => $this->users[$username]['name'],
                 'role'       => $this->users[$username]['role']
             ]);
-            return redirect()->to('/')->with('success', 'Selamat datang ' . $this->users[$username]['name']);
+            return redirect()->to('/')->with('success', 'Selamat datang, ' . $this->users[$username]['name']);
         }
 
         return redirect()->back()->with('error', 'Username atau password salah!');

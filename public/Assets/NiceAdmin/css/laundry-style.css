@@ -1,0 +1,236 @@
+/* Oxford University Color Scheme - UPDATED */
+:root {
+    --primary-blue: #002147;
+    --accent-red: #E31E24;
+    --accent-green: #28a745;
+    --accent-orange: #fd7e14;
+    --accent-purple: #6f42c1;
+    --cream: #F8F8F8;
+    --dark-gray: #333333;
+    --light-blue: #e3f2fd;
+}
+
+/* Header - Gradient Multi-color */
+#header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%) !important;
+    box-shadow: 0 2px 15px rgba(0,33,71,0.3);
+    height: 70px;
+}
+
+/* Sidebar - Dark Blue dengan accent */
+#sidebar {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+    border-right: 3px solid var(--accent-red);
+}
+
+.sidebar-nav .nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.95rem;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    margin-bottom: 5px;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: white !important;
+    background: linear-gradient(90deg, var(--accent-red) 0%, transparent 100%) !important;
+    border-left-color: var(--accent-red);
+    padding-left: 20px;
+}
+
+.sidebar-nav .nav-link.active {
+    color: white !important;
+    background: linear-gradient(90deg, var(--accent-green) 0%, transparent 100%) !important;
+    border-left-color: var(--accent-green);
+}
+
+/* Page Title */
+.pagetitle {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-red);
+}
+
+.pagetitle h1 {
+    color: var(--primary-blue) !important;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Cards dengan warna berbeda */
+.card {
+    border: none !important;
+    border-top: 4px solid var(--accent-green) !important;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08) !important;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:nth-child(2n) {
+    border-top-color: var(--accent-red) !important;
+}
+
+.card:nth-child(3n) {
+    border-top-color: var(--accent-orange) !important;
+}
+
+.card:nth-child(4n) {
+    border-top-color: var(--accent-purple) !important;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.card .card-title {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+/* Buttons - Multi-color */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%) !important;
+    border: none !important;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(227,30,36,0.3);
+}
+
+/* Info Cards dengan warna berbeda */
+.dashboard .sales-card .card-icon {
+    color: var(--accent-red);
+    background: #ffe6e6;
+}
+
+.dashboard .revenue-card .card-icon {
+    color: var(--accent-green);
+    background: #e6ffe6;
+}
+
+.dashboard .customers-card .card-icon {
+    color: var(--accent-orange);
+    background: #fff3e0;
+}
+
+/* Hero Section */
+.hero-oxford {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 50%, var(--accent-red) 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 30px;
+    border-bottom: 5px solid var(--accent-red);
+}
+
+.hero-oxford h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Stats dengan warna */
+.stat-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--accent-green);
+}
+
+.stat-box:nth-child(2n) {
+    border-bottom-color: var(--accent-red);
+}
+
+.stat-box:nth-child(3n) {
+    border-bottom-color: var(--accent-orange);
+}
+
+.stat-box h3 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Alert dengan warna lebih terang */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+    color: #333 !important;
+}
+
+.alert-success {
+    background-color: #d4edda !important;
+    border-left: 4px solid var(--accent-green);
+}
+
+.alert-info {
+    background-color: #d1ecf1 !important;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.alert-warning {
+    background-color: #fff3cd !important;
+    border-left: 4px solid var(--accent-orange);
+}
+
+/* Footer */
+#footer {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1a1a2e 100%) !important;
+    color: white !important;
+    padding: 20px 0;
+    border-top: 3px solid var(--accent-red);
+}
+
+/* Text visibility improvement */
+body {
+    color: #333 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-blue) !important;
+    font-weight: 600;
+}
+
+/* Table styling */
+.table {
+    color: #333 !important;
+}
+
+.table thead {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple)) !important;
+    color: white !important;
+}
+
+/* Badge colors */
+.badge.bg-primary {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple)) !important;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, var(--accent-green), #20c997) !important;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(135deg, var(--accent-orange), #ffc107) !important;
+    color: #000 !important;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(135deg, var(--accent-red), #dc3545) !important;
+}
