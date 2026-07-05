@@ -1,5 +1,6 @@
 <?= $this->extend('layout_clear') ?>
 <?= $this->section('title') ?>Login<?= $this->endSection() ?>
+
 <?= $this->section('content') ?>
 <main>
     <div class="container">
@@ -13,20 +14,31 @@
                                 <span class="d-none d-lg-block ms-2" style="font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: #0369a1;">ALLAUNDRY</span>
                             </a>
                         </div>
+                        
                         <div class="card mb-3 login-card">
                             <div class="card-body">
                                 <div class="pt-4 pb-2">
                                     <h5 class="card-title text-center pb-0 fs-4">Login Administrator</h5>
                                     <p class="text-center small">Masukkan username & password</p>
                                 </div>
+
                                 <?php if(session()->getFlashdata('error')): ?>
-                                    <div class="alert alert-danger"><i class="bi bi-exclamation-circle me-1"></i><?= session()->getFlashdata('error') ?></div>
+                                    <div class="alert alert-danger">
+                                        <i class="bi bi-exclamation-circle me-1"></i>
+                                        <?= session()->getFlashdata('error') ?>
+                                    </div>
                                 <?php endif; ?>
+                                
                                 <?php if(session()->getFlashdata('success')): ?>
-                                    <div class="alert alert-success"><i class="bi bi-check-circle me-1"></i><?= session()->getFlashdata('success') ?></div>
+                                    <div class="alert alert-success">
+                                        <i class="bi bi-check-circle me-1"></i>
+                                        <?= session()->getFlashdata('success') ?>
+                                    </div>
                                 <?php endif; ?>
+
                                 <form class="row g-3" action="/loginProcess" method="post">
                                     <?= csrf_field() ?>
+                                    
                                     <div class="col-12">
                                         <label class="form-label">Username</label>
                                         <div class="input-group">
@@ -34,6 +46,7 @@
                                             <input type="text" name="username" class="form-control" required autofocus>
                                         </div>
                                     </div>
+
                                     <div class="col-12">
                                         <label class="form-label">Password</label>
                                         <div class="input-group">
@@ -41,18 +54,29 @@
                                             <input type="password" name="password" class="form-control" required>
                                         </div>
                                     </div>
+
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-2" type="submit"><i class="bi bi-box-arrow-in-right me-1"></i> Login</button>
+                                        <button class="btn btn-primary w-100 py-2" type="submit">
+                                            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                                        </button>
                                     </div>
+
                                     <div class="col-12">
                                         <div class="alert alert-info mb-0">
-                                            <small><strong>Default Login:</strong><br>👤 admin / admin123<br>👤 kasir / kasir123</small>
+                                            <small>
+                                                <strong>Default Login:</strong><br>
+                                                👤 <strong>Admin:</strong> admin / admin123<br>
+                                                👤 <strong>Kasir:</strong> kasir / kasir123
+                                            </small>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="credits text-center">Designed by <a href="#">Aldi Firmansyah</a> - UAS PWL 2026</div>
+                        
+                        <div class="credits text-center">
+                            Designed by <a href="#">Aldi Firmansyah</a> - UAS PWL 2026
+                        </div>
                     </div>
                 </div>
             </div>

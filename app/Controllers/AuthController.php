@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 class AuthController extends BaseController
@@ -37,6 +36,7 @@ class AuthController extends BaseController
                 'name'       => $this->users[$username]['name'],
                 'role'       => $this->users[$username]['role']
             ]);
+            
             return redirect()->to('/')->with('success', 'Selamat datang, ' . $this->users[$username]['name']);
         }
 

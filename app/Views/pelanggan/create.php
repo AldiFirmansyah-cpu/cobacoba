@@ -1,7 +1,18 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('title') ?>Tambah Pelanggan<?= $this->endSection() ?>
 <?= $this->section('content') ?>
-<div class="pagetitle"><h1>Tambah Pelanggan Baru</h1><nav><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item"><a href="/pelanggan">Pelanggan</a></li><li class="breadcrumb-item active">Tambah</li></ol></nav></div>
+
+<div class="pagetitle">
+    <h1>Tambah Pelanggan Baru</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/pelanggan">Pelanggan</a></li>
+            <li class="breadcrumb-item active">Tambah</li>
+        </ol>
+    </nav>
+</div>
+
 <section class="section">
     <div class="row">
         <div class="col-lg-8">
@@ -11,16 +22,22 @@
                     <form action="/pelanggan/store" method="post">
                         <?= csrf_field() ?>
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Nama Lengkap</label>
-                            <div class="col-sm-9"><input type="text" name="nama" class="form-control" required></div>
+                            <label class="col-sm-3 col-form-label">Nama Lengkap <span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="nama" class="form-control" required>
+                            </div>
                         </div>
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">No. Telepon</label>
-                            <div class="col-sm-9"><input type="text" name="telepon" class="form-control" required></div>
+                            <label class="col-sm-3 col-form-label">No. Telepon <span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="telepon" class="form-control" required>
+                            </div>
                         </div>
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Alamat</label>
-                            <div class="col-sm-9"><textarea name="alamat" class="form-control" rows="3" required></textarea></div>
+                            <label class="col-sm-3 col-form-label">Alamat <span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <textarea name="alamat" class="form-control" rows="3" required></textarea>
+                            </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-9 offset-sm-3">

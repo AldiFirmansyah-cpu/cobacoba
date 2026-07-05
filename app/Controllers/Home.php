@@ -1,11 +1,12 @@
 <?php
-
 namespace App\Controllers;
 
 class Home extends BaseController
 {
     public function index()
     {
+        $userRole = session()->get('role');
+        
         $layanan = $this->getLayananData();
         $pelanggan = $this->getPelangganData();
         $transaksi = $this->getTransaksiData();
@@ -20,6 +21,7 @@ class Home extends BaseController
             'sedangDiproses'    => count(array_filter($transaksi, fn($t) => $t['status'] === 'Diproses')),
             'selesai'           => count(array_filter($transaksi, fn($t) => $t['status'] === 'Selesai')),
             'diambil'           => count(array_filter($transaksi, fn($t) => $t['status'] === 'Diambil')),
+            'userRole'          => $userRole
         ];
 
         return view('home', $data);
